@@ -15,6 +15,8 @@ struct ContentView: View {
     @State private var highScore: Int = 0
     @State private var coins: Int = 100
     @State private var betAmmount: Int = 10
+    @State private var isActiveBet10: Bool = true
+    @State private var isActiveBet20: Bool = false
     
     //MARK: - FUNCTIONS
     //SPIN REELS
@@ -53,6 +55,18 @@ struct ContentView: View {
     
     func playerLosses(){
         coins -= betAmmount
+    }
+    
+    func activateBet20(){
+        betAmmount = 20
+        isActiveBet20 = true
+        isActiveBet10 = false
+    }
+ 
+    func activateBet10(){
+        betAmmount = 10
+        isActiveBet10 = true
+        isActiveBet20 = false
     }
     
     //GAME IS OVER
@@ -148,18 +162,19 @@ struct ContentView: View {
                     //MARK: - BET 20
                     HStack(alignment:.center, spacing: 10) {
                         Button(action: {
+                            self.activateBet20()
                             print("Bet 20 coins")
                         }){
                           Text("20")
                                 .fontWeight(.heavy)
-                                .foregroundColor(Color.white)
+                                .foregroundColor(isActiveBet20 ? Color("ColorYellow") : Color.white)
                                 .modifier(BetnumberModifier())
                         }
                         .modifier(BetCapsuleModifier())
 
                         Image("gfx-casino-chips")
                             .resizable()
-                            .opacity(0)
+                            .opacity(isActiveBet20 ? 1 : 0)
                             .modifier(CasinoChipsModifier())
                     }//: HSTACK
                     
@@ -167,15 +182,16 @@ struct ContentView: View {
                     HStack(alignment:.center, spacing: 10) {
                         Image("gfx-casino-chips")
                             .resizable()
-                            .opacity(1)
+                            .opacity(isActiveBet10 ? 1 : 0)
                             .modifier(CasinoChipsModifier())
                         
                         Button(action: {
+                            self.activateBet10()
                             print("Bet 10 coins")
                         }){
                           Text("10")
                                 .fontWeight(.heavy)
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(isActiveBet10 ? Color("ColorYellow") : Color.white)
                                 .modifier(BetnumberModifier())
                         }
                         .modifier(BetCapsuleModifier())
