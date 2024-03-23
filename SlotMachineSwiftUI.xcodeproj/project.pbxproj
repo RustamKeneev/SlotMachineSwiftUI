@@ -26,7 +26,33 @@
 		FFF60D952BAD5D1100BEF873 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D942BAD5D1100BEF873 /* ReelView.swift */; };
 		FFF60D972BADA08300BEF873 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D962BADA08300BEF873 /* InfoView.swift */; };
 		FFF60D992BAF04FF00BEF873 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D982BAF04FF00BEF873 /* PlaySound.swift */; };
+		FFF60DA02BAF119D00BEF873 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF60D9F2BAF119D00BEF873 /* Stickers.xcassets */; };
+		FFF60DA42BAF119D00BEF873 /* SlotMachineStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FFF60D9D2BAF119C00BEF873 /* SlotMachineStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFF60DA22BAF119D00BEF873 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFDA943D2BAC1612002C5266 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFF60D9C2BAF119C00BEF873;
+			remoteInfo = SlotMachineStickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFF60DA82BAF119D00BEF873 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FFF60DA42BAF119D00BEF873 /* SlotMachineStickers.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FFDA94452BAC1612002C5266 /* SlotMachineSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachineSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +76,9 @@
 		FFF60D962BADA08300BEF873 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		FFF60D982BAF04FF00BEF873 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		FFF60D9A2BAF0F4500BEF873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FFF60D9D2BAF119C00BEF873 /* SlotMachineStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SlotMachineStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF60D9F2BAF119D00BEF873 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		FFF60DA12BAF119D00BEF873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDA94472BAC1612002C5266 /* SlotMachineSwiftUI */,
+				FFF60D9E2BAF119C00BEF873 /* SlotMachineStickers */,
 				FFDA94462BAC1612002C5266 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDA94452BAC1612002C5266 /* SlotMachineSwiftUI.app */,
+				FFF60D9D2BAF119C00BEF873 /* SlotMachineStickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +169,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		FFF60D9E2BAF119C00BEF873 /* SlotMachineStickers */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60D9F2BAF119D00BEF873 /* Stickers.xcassets */,
+				FFF60DA12BAF119D00BEF873 /* Info.plist */,
+			);
+			path = SlotMachineStickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,15 +188,32 @@
 				FFDA94412BAC1612002C5266 /* Sources */,
 				FFDA94422BAC1612002C5266 /* Frameworks */,
 				FFDA94432BAC1612002C5266 /* Resources */,
+				FFF60DA82BAF119D00BEF873 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FFF60DA32BAF119D00BEF873 /* PBXTargetDependency */,
 			);
 			name = SlotMachineSwiftUI;
 			productName = SlotMachineSwiftUI;
 			productReference = FFDA94452BAC1612002C5266 /* SlotMachineSwiftUI.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FFF60D9C2BAF119C00BEF873 /* SlotMachineStickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF60DA52BAF119D00BEF873 /* Build configuration list for PBXNativeTarget "SlotMachineStickers" */;
+			buildPhases = (
+				FFF60D9B2BAF119C00BEF873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlotMachineStickers;
+			productName = SlotMachineStickers;
+			productReference = FFF60D9D2BAF119C00BEF873 /* SlotMachineStickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -169,6 +226,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					FFDA94442BAC1612002C5266 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					FFF60D9C2BAF119C00BEF873 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -187,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				FFDA94442BAC1612002C5266 /* SlotMachineSwiftUI */,
+				FFF60D9C2BAF119C00BEF873 /* SlotMachineStickers */,
 			);
 		};
 /* End PBXProject section */
@@ -210,6 +271,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFF60D9B2BAF119C00BEF873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF60DA02BAF119D00BEF873 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -229,6 +298,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFF60DA32BAF119D00BEF873 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFF60D9C2BAF119C00BEF873 /* SlotMachineStickers */;
+			targetProxy = FFF60DA22BAF119D00BEF873 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FFDA94512BAC1613002C5266 /* Debug */ = {
@@ -412,6 +489,44 @@
 			};
 			name = Release;
 		};
+		FFF60DA62BAF119D00BEF873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VYT9YM6M52;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SlotMachineStickers/Info.plist;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = onlineapteka.SlotMachineSwiftUI.SlotMachineStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFF60DA72BAF119D00BEF873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VYT9YM6M52;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SlotMachineStickers/Info.plist;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = onlineapteka.SlotMachineSwiftUI.SlotMachineStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +544,15 @@
 			buildConfigurations = (
 				FFDA94542BAC1613002C5266 /* Debug */,
 				FFDA94552BAC1613002C5266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF60DA52BAF119D00BEF873 /* Build configuration list for PBXNativeTarget "SlotMachineStickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF60DA62BAF119D00BEF873 /* Debug */,
+				FFF60DA72BAF119D00BEF873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
